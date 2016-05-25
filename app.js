@@ -4,7 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var http = require('http');
+var fs = require('fs');
+var debug = require('debug')('app4');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -56,5 +58,8 @@ app.use(function(err, req, res, next) {
   });
 });
 
+app.set('port', process.env.PORT || 3000);
 
-module.exports = app;
+var server = app.listen(app.get('port'), function(){
+  debug('Express listening on port' + server.address().port);
+})
