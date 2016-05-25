@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    title dictate.js demo
+    link(rel='stylesheet', type='text/css', href='../stylesheets/demo.css')
+  body
+    span#serverStatusBar(title='Number of available workers')
+    .controls
+      button#buttonStart(onclick='startListening();', title='Starts listening for speech, i.e. starts recording and transcribing.') Start
+      button#buttonStop(onclick='stopListening();', title='Stops listening for speech. Speech captured so far will be recognized as if the user had stopped speaking at this point. Note that in the default case, this does not need to be called, as the speech endpointer will automatically stop the recognizer listening when it determines speech has completed.') Stopp
+      button#buttonCancel(onclick='cancel();', title='Cancels the speech recognition.') Katkesta
+    textarea#trans(rows='8', cols='80')
+    #statusBar
+    hr
+    .controls
+      button(onclick='init();', title='Request access to the microphone') Init
+      button(onclick='showConfig();', title='Show the configuration of the Dictate object') Config
+      button(onclick='clearLog();', title='Clear the log') Clear log
+    pre#log.
+    script(src='../javascripts/dictate.js')
+    script(src='../javascripts/recorder.js')
+    script(src='../javascripts/jquery-1.10.2.min.js')
+    script(src='../javascripts/demo.js')

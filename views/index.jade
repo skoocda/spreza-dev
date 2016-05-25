@@ -1,0 +1,79 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    meta(name='description', content='')
+    meta(name='author', content='Danny Lloyd')
+    // link(rel='icon', href='../../favicon.ico')
+    title Spreza - Never take notes again
+    // Bootstrap core CSS
+    //link(href='../../dist/css/bootstrap.min.css', rel='stylesheet')
+
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css')
+    link(rel='stylesheet', href='../stylesheets/jumbotron.css')
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') Spreza
+        #navbar.navbar-collapse.collapse
+          form.navbar-form.navbar-right
+            .form-group
+              input.form-control(type='text', placeholder='Email')
+            //.form-group
+              input.form-control(type='password', placeholder='Password')
+            button.btn.btn-success(type='submit') Sign up
+        // /.navbar-collapse
+    // Main jumbotron for a primary marketing message or call to action
+    .jumbotron
+      .container
+        h1 sprezzatura
+        p /ˌspretsəˈt(y)o͝orə/
+        br
+        p a studied carelessness, especially as a characteristic quality or style of art or literature.
+        p
+          a.btn.btn-primary.btn-lg(href='/mob', role='button') Try it out »
+    .container
+      // Example row of columns
+      .container
+        div.row
+          div.col-sm-4
+            h2 Transcribe
+            p
+              | Transcription occurs automatically and instantly using any smartphone or laptop microphone
+            //p
+              a.btn.btn-default(href='#', role='button') View details »
+          div.col-sm-4
+            h2 Analyze
+            p
+              | Use keyword queries, natural language questions or automatic summarization to get the valuable information
+            //p
+              a.btn.btn-default(href='#', role='button') View details »
+          div.col-sm-4
+            h2 Distribute
+            p
+              | One tap to send the critical info to anyone who needs to know!
+            //p
+              a.btn.btn-default(href='#', role='button') View details »
+      hr
+      footer
+        p © 2016 Speza Technologies, Inc.
+    // /container
+    //
+      Bootstrap core JavaScript
+      ==================================================
+    // Placed at the end of the document so the pages load faster
+    script(src='../javascripts/jquery-1.10.2.min.js')
+    //script.
+      window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\\/script>')
+
+    script(src='../javascripts/jquery-1.10.2.min.js')
+    script(src='//netdna.bootstrapcdn.com/bootstrap/3.6.3/js/bootstrap.min.js')
